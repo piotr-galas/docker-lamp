@@ -29,6 +29,11 @@ function CreateMySQLUser()
     mysql -uroot -e "CREATE USER 'admin'@'%' IDENTIFIED BY '$PASS'"
     mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION"
 
+    mysql -uroot -e "FLUSH PRIVILEGES;"
+    mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;"
+    mysql -uroot -e "UPDATE mysql.user SET password=PASSWORD('$PASS') WHERE user='root'"
+
+
     mysqladmin -uroot shutdown
 }
 
