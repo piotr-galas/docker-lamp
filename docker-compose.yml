@@ -1,0 +1,10 @@
+mysql:
+  build: Mysql
+  volumes_from:
+    - data
+data:
+  image: ubuntu:14.04
+  volumes:
+    - ~/.data:/data
+
+
