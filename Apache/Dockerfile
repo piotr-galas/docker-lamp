@@ -14,6 +14,7 @@ RUN apt-get -y install apache2
 RUN apt-get -y install php5 libapache2-mod-php5 php5-mcrypt
 RUN apt-get -y install libapache2-mod-auth-mysql php5-mysql
 
+
 RUN rm /etc/php5/apache2/php.ini
 ADD php.ini /etc/php5/apache2/
 

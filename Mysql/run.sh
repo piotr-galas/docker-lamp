@@ -1,9 +1,5 @@
 #!/bin/bash
 
-
-
-
-
 function StartMySQL()
 {
 
